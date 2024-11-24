@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.openapi.docs import get_swagger_ui_html, get_redoc_html
 from fastapi.openapi.utils import get_openapi
 from pydantic import BaseModel, Field
-import joblib
+import pickle
 import pandas as pd
 import uvicorn
 from typing import List, Dict, Optional
@@ -186,7 +186,7 @@ async def redoc_html():
 
 # Load the model at startup
 try:
-    model_info = joblib.load('mental_health_prediction_model.pkl')
+    model_info = pickle.load('mental_health_prediction_model.pkl')
 except Exception as e:
     raise RuntimeError(f"Failed to load model: {str(e)}")
 
