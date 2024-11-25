@@ -1,144 +1,143 @@
-# Feel Heal - Mental Health Prediction App
+# Feel Heal: Mental Health Prediction Using Creative Industries Engagement
 
-[![Watch the demo](https://img.youtube.com/vi/YOUR_YOUTUBE_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_YOUTUBE_VIDEO_ID)
+## Research Overview
+This project investigates the effectiveness of creative and cultural industries in supporting individuals with psychological disorders and autism. Through machine learning and data analysis, the research aims to predict anxiety and depression levels while considering creative engagement factors.
 
-## 🚀 Live Demo
-- Mobile App
-- API Documentation: [API Docs](your-api-url/docs)
-- Design Prototype: [Figma Design](https://www.figma.com/design/8KZoT9tvQNFQPdTGCoUyk2/Feel-%26-Heal?node-id=0-1&t=kQJv3Sp3UJQPkGFa-1)
+## Research Objectives
+1. Develop an accurate prediction model for anxiety and depression levels
+2. Analyze the correlation between creative engagement and mental health
+3. Provide data-driven insights for mental health support through creative industries
+4. Evaluate the effectiveness of cultural activities in psychological well-being
 
-## 📝 Description
-Feel Heal is a mental health prediction application that helps users monitor and assess their mental well-being based on various lifestyle and health metrics. Using machine learning, the app provides personalized insights about potential anxiety and depression risks.
+## Dataset: RICH (Volume and Variety)
 
-## ✨ Features
-- **Health Metrics Analysis**: Track daily activities, sleep patterns, and social interactions
-- **Risk Assessment**: Get personalized anxiety and depression risk evaluations
-- **Confidence Scores**: Understand the reliability of predictions
-- **Contributing Factors**: Identify lifestyle elements affecting mental health
-- **Personalized Recommendations**: Receive tailored suggestions for improvement
+### Data Sources & Description
 
-## 🛠️ Technical Stack
-### Frontend
-- Flutter/Dart
-- Material Design
-- State Management: [Your State Management Solution]
+#### 1. Primary Health Metrics Dataset
+- **Volume**: 10,000+ daily records
+- **Timespan**: 2 years longitudinal data
+- **Features**: 
+  - Sleep patterns
+  - Physical activity levels
+  - Heart rate monitoring
+  - Daily step counts
+- **Collection**: Health monitoring devices
+- **Format**: Structured CSV files
 
-### Backend
-- FastAPI
-- Scikit-learn
-- Pandas
-- NumPy
-- Joblib
+#### 2. Creative Engagement Data
+- **Volume**: 8,000+ activity records
+- **Categories**:
+  - Visual arts participation
+  - Music engagement
+  - Dance activities
+  - Theater attendance
+  - Digital media creation
+- **Metrics**: 
+  - Engagement frequency
+  - Session duration
+  - Activity type classification
 
-## 📋 API Documentation
-Our API provides comprehensive endpoints for mental health prediction:
+#### 3. Mental Health Assessments
+- **Volume**: 15,000+ evaluations
+- **Tools**: 
+  - GAD-7 (Anxiety)
+  - PHQ-9 (Depression)
+- **Validation**: Professional clinical evaluations
+
+## Technical Implementation
+
+### Machine Learning Model
+- Developed using scikit-learn
+- Features engineered from health and creative engagement metrics
+- Predictive analysis for anxiety and depression levels
+
+### API Development
+- FastAPI framework
+- RESTful endpoints for predictions
+- Data validation and error handling
+- Swagger documentation
+
+### Frontend Application
+- Flutter-based implementation
+- Health metrics input interface
+- Prediction results visualization
+- User-friendly design
+
+## API Documentation
 
 ### Base URL
-```
-https://your-api-url.com
-```
-
-### Endpoints
-
-#### Health Check
 ```http
-GET /health
+https://your-api-url
 ```
 
-#### Predict Mental Health
+### Prediction Endpoint
 ```http
 POST /predict
-```
 
-Request Body Example:
-```json
+Request Body:
 {
-    "age": 30,
-    "sleep_quality": 7.5,
-    "daily_steps": 8000,
-    "calories_burned": 2200.5,
-    "physical_activity_level": 1,
-    "heart_rate": 70,
-    "social_interaction": 3,
-    "medication_usage": 1,
-    "sleep_duration": 7.5
+    "age": int,
+    "sleep_quality": float,
+    "daily_steps": int,
+    "calories_burned": float,
+    "physical_activity_level": int,
+    "heart_rate": int,
+    "social_interaction": int,
+    "medication_usage": int,
+    "sleep_duration": float
 }
 ```
 
-For detailed API documentation, visit our [Swagger UI](your-api-url/docs) or [ReDoc](your-api-url/redoc).
-
-## 🎨 Design
-Our user interface was carefully crafted to provide a comfortable and intuitive experience:
-
-- [View Figma Prototype](your-figma-url)
-- [Design System Documentation](your-design-docs-url)
-
-### Design Features
-- Accessible color schemes
-- Intuitive navigation
-- Responsive layouts
-- Clear data visualization
-
-## 🚀 Getting Started
+## Project Setup
 
 ### Prerequisites
 - Python 3.9+
-- Flutter 3.0+
-- Git
+- Flutter SDK
+- Required Python packages in requirements.txt
 
 ### Installation
 
-1. Clone the repository
+1. Backend Setup
 ```bash
-git clone https://github.com/your-username/feel-heal.git
-cd feel-heal
-```
+# Create virtual environment
+python -m venv .venv
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
 
-2. Backend Setup
-```bash
-cd backend
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+# Install dependencies
 pip install -r requirements.txt
-uvicorn main:app --reload
+
+# Run API
+uvicorn main:app --host 0.0.0.0 --port 8001
 ```
 
-3. Frontend Setup
+2. Frontend Setup
 ```bash
-cd frontend
+cd feelhealmental
 flutter pub get
 flutter run
 ```
 
-## 📱 Mobile App Features
-- Real-time health metrics tracking
-- Intuitive data input
-- Visualization of prediction results
-- Progress tracking
-- Personalized recommendations
+## Research Results
 
-## 💡 Future Improvements
-- [ ] Advanced data analytics
-- [ ] Social support features
-- [ ] Integration with health devices
-- [ ] Expanded mental health resources
-- [ ] Community features
+### Model Performance
+- Accuracy metrics
+- Validation results
+- Feature importance analysis
 
-## 📄 License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+### Key Findings
+- Correlation between creative engagement and mental health
+- Impact of various activities on anxiety/depression levels
+- Effectiveness of predictive modeling
 
-## 👥 Contributors
-- sjamillah
+## Future Research Directions
+1. Integration of additional creative industry metrics
+2. Longitudinal study of intervention effectiveness
+3. Expansion of prediction models
+4. Integration with clinical assessment tools
 
-## 📞 Support
-For support, email [support@feelheal.com](mailto:support@feelheal.com) or join our [Discord community](discord-invite-link).
+## References
+[Include your academic references here]
 
-## 🙏 Acknowledgments
-- Mental Health Resources
-- Design Inspiration
-- Open Source Communities
-- [List any other acknowledgments]
-
----
-
-Made with ❤️ by Jamillah Ssozi
+## Author
+[Ssozi Jamillah]
+[African Leadership University]
